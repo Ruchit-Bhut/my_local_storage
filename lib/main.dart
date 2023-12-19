@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_local_storage/shared_preferences/home_page.dart';
+import 'package:my_local_storage/shared_preferences/simple_data.dart';
 
 void main(){
   runApp(MyApp());
