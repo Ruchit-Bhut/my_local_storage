@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_local_storage/shared_preferences/home_page.dart';
 import 'package:my_local_storage/shared_preferences/simple_data.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -16,9 +15,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SimpleData(),
     );
   }
 }

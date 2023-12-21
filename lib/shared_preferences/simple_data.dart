@@ -31,7 +31,7 @@ class _SimpleDataState extends State<SimpleData> {
 
   void setData() async {
     SharedPreferences sp = await SharedPreferences.getInstance();
-    sp.setInt("age", 23);
+    sp.setInt('age', 23);
     sp.setDouble('price', 99.99);
     sp.setString('name', 'Ruchit Bhut');
     sp.setBool('male', true);
