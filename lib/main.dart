@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (_) => ProductProvider()..fetchProducts(),
-      child:  MaterialApp(
+      child:  const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Products App',
         home: ProductsPage(),
