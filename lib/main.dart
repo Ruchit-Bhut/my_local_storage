@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:my_local_storage/shared_preferences/simple_data.dart';
+import 'package:my_local_storage/my_practical/api_provider.dart';
+import 'package:my_local_storage/my_practical/product_page.dart';
+import 'package:provider/provider.dart';
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SimpleData(),
+    return ChangeNotifierProvider(
+      create: (_) => ProductProvider()..fetchProducts(),
+      child:  MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Products App',
+        home: ProductsPage(),
+      ),
     );
   }
 }
