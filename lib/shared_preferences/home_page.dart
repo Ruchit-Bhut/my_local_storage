@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                 labelText: 'Text',
               ),
             ),
-            SizedBox(height: 40,),
+            const SizedBox(height: 40,),
             ElevatedButton(
               onPressed: () async {
                 if (name.text.trim().isNotEmpty) {
